@@ -33,8 +33,10 @@ public class AggregatorController {
 			System.out.println(e.getMessage());
 			map.put("userDetails", "User not found at id- " + id);
 		}
+		
 		Object orders = request.getForObject(ordersServiceUrl + id, Object.class);
 		map.put("orders", orders);
+		
 		return map;
 	}
 
